@@ -14,6 +14,7 @@
 1. [Referensi](#referensi)
 
 ## JSON Server
+Mockup server, dipasang dan didemokan.
 
 ## Vue Lifecycle
 VueJS ini adalah sebuah Frontend framework pada javascript yang menggunakan Virtual DOM.  
@@ -35,7 +36,7 @@ Nama lifecycle hook: **beforeCreate** & **created**
 Pada lifecycle ini, bisa mengakses data reaktif dan event yang ada, tapi template tampilan belum  
 ada.
 
-**Paling sering digunakan**
+**PALING sering digunakan**
 
 #### mounted
 Nama lifecycle hook: **beforeMount** & **mounted**
@@ -80,8 +81,8 @@ Lifecycle ini dipanggil ketika instance vue sudah akan atau telah di destroy.
 
 
 ### Computed & Watch
-Computed -> Complex Logic (Olah data)
-Watch -> Melihat ada perubahan data
+Computed -> Complex Logic (Olah data)  
+Watch -> Melihat ada perubahan data (sederhana)
 
 #### Step by step (Part 2)
 1. Add Checkbox for Filter All / Done / Not Done
