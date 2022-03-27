@@ -266,26 +266,28 @@
 
     <!-- Script section -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
 
     <script language="javascript">
-      const app = new Vue({
+      new Vue.createApp({
         el: "#app",
-        data: {
-          isLoggedIn: false,
-          username: "",
-          password: "",
-          todo: {
-            name: "",
-            description: "",
-            priority: "",
-            is_done: false,
-          },
-          todos: [],
-          imageSource: {
-            url: "https://placekitten.com/80/80",
-            alt: "Placeholder 80x80",
-          },
+        data() {
+          return {
+            isLoggedIn: false,
+            username: "",
+            password: "",
+            todo: {
+              name: "",
+              description: "",
+              priority: "",
+              is_done: false,
+            },
+            todos: [],
+            imageSource: {
+              url: "https://placekitten.com/80/80",
+              alt: "Placeholder 80x80",
+            },
+          };
         },
         methods: {
           letsGoButtonHandler: function () {
@@ -312,7 +314,7 @@
             });
           },
         },
-      });
+      }).mount("#app");
     </script>
   </body>
 </html>

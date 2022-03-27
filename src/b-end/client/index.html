@@ -270,7 +270,7 @@
 
     <!-- Script section -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
     <!-- TODO: 2. Add Axios to fetch data from mock server -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.js"
@@ -281,50 +281,52 @@
     <!-- TODO: 3. Add SweetAlert Script for error handling -->
 
     <script language="javascript">
-      const app = new Vue({
+      Vue.createApp({
         el: "#app",
-        data: {
-          isLoggedIn: false,
-          username: "",
-          password: "",
-          todo: {
-            name: "",
-            description: "",
-            priority: "",
-            is_done: false,
-          },
-          todos: [
-            // {
-            //   "id": 1,
-            //   "name": "Belajar Vue",
-            //   "description": "Belajar Vue dari situs Vuenya langsung",
-            //   "priority": "Critical"
-            // },
-            // {
-            //   "id": 2,
-            //   "name": "Belajar Tailwind",
-            //   "description": "Belajar Tailwind dari situs Vuenya langsung",
-            //   "priority": "Low"
-            // },
-            // {
-            //   "id": 3,
-            //   "name": "Buat Aplikasi ToDo",
-            //   "description": "Buat aplikasi ToDo sederhana dengan memanfaatkan Vue dan Tailwind",
-            //   "priority": "Highest"
-            // },
-            // {
-            //   "id": 4,
-            //   "name": "Implementasi json-server",
-            //   "description": "Tarik data dengan Vue + json-server",
-            //   "priority": "Critical"
-            // }
-          ],
-          // TODO: 11b. Add todosFilter
-          todosFilter: "all",
-          imageSource: {
-            url: "https://placekitten.com/80/80",
-            alt: "Placeholder 80x80",
-          },
+        data() {
+          return {
+            isLoggedIn: false,
+            username: "",
+            password: "",
+            todo: {
+              name: "",
+              description: "",
+              priority: "",
+              is_done: false,
+            },
+            todos: [
+              // {
+              //   "id": 1,
+              //   "name": "Belajar Vue",
+              //   "description": "Belajar Vue dari situs Vuenya langsung",
+              //   "priority": "Critical"
+              // },
+              // {
+              //   "id": 2,
+              //   "name": "Belajar Tailwind",
+              //   "description": "Belajar Tailwind dari situs Vuenya langsung",
+              //   "priority": "Low"
+              // },
+              // {
+              //   "id": 3,
+              //   "name": "Buat Aplikasi ToDo",
+              //   "description": "Buat aplikasi ToDo sederhana dengan memanfaatkan Vue dan Tailwind",
+              //   "priority": "Highest"
+              // },
+              // {
+              //   "id": 4,
+              //   "name": "Implementasi json-server",
+              //   "description": "Tarik data dengan Vue + json-server",
+              //   "priority": "Critical"
+              // }
+            ],
+            // TODO: 11b. Add todosFilter
+            todosFilter: "all",
+            imageSource: {
+              url: "https://placekitten.com/80/80",
+              alt: "Placeholder 80x80",
+            },
+          };
         },
         methods: {
           // TODO: 1. Handle Login
@@ -463,7 +465,7 @@
             });
           },
         },
-      });
+      }).mount("#app");
     </script>
   </body>
 </html>
