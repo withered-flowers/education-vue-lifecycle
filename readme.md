@@ -5,7 +5,7 @@
       - created
       - mounted
       - updated
-      - destroyed
+      - unmounted
     - Which Lifecycle?
       - fetchData
       - checkToken
@@ -56,10 +56,10 @@ ulang dan ditambalsulam.
 
 Cocok digunakan untuk menghapus event listener secara manual (untuk optimasi)
 
-#### destroyed
-Nama lifecycle hook: **beforeDestroy** & **destroyed**
+#### unmounted
+Nama lifecycle hook: **beforeUnmount** & **unmounted**
 
-Lifecycle ini dipanggil ketika instance vue sudah akan atau telah di destroy.
+Lifecycle ini dipanggil ketika instance vue sudah akan atau telah di unmount.
 
 ### Mari Demo
 - Demo JSON-Server
@@ -90,7 +90,7 @@ Watch -> Melihat ada perubahan data (sederhana)
 1. Computed for todos, filter by filterName
 
 ## Referensi
-* https://vuejs.org/v2/api/
-* https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram
+* https://vuejs.org/api/
+* https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram
 * https://medium.com/badr-interactive/mengenal-lifecycle-hooks-pada-vue-js-78cd2225a69
 * https://www.digitalocean.com/community/tutorials/vuejs-component-lifecycle
