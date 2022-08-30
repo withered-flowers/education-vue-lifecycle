@@ -18,13 +18,12 @@ Mockup server, dipasang dan didemokan.
 
 ## Vue Lifecycle
 VueJS ini adalah sebuah Frontend framework pada javascript yang menggunakan Virtual DOM.  
-Mirip pada DOM yang memiliki event siklus onready, onsubmit dan sebagainya, di VueJS ini  
-pun memiliki beberapa siklus event yang disediakan di dalam VueJS ini.
 
-Untuk melihat keseluruhan diagram siklus kehidupan dari instance pada VueJS, bisa dilirik  
-di sini yah https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram
+Mirip pada DOM yang memiliki event siklus onready, onsubmit dan sebagainya, di VueJS ini pun memiliki beberapa siklus event yang disediakan di dalam VueJS ini.
 
-TL;DR  
+Untuk melihat keseluruhan diagram siklus kehidupan dari instance pada VueJS, bisa dilirik di sini yah https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram
+
+TL;DR:  
 Mirip hooks yang ada di sequelize.
 
 ### Lifecycle Breakdown
@@ -33,26 +32,21 @@ Mari kita lihat satu per satu lifecycle event yang ada di VueJS ini yah !
 #### created
 Nama lifecycle hook: **beforeCreate** & **created**  
 
-Pada lifecycle ini, bisa mengakses data reaktif dan event yang ada, tapi template tampilan belum  
-ada.
+Pada lifecycle ini, bisa mengakses data reaktif dan event yang ada, tapi template tampilan belum ada.
 
 **PALING sering digunakan**
 
 #### mounted
 Nama lifecycle hook: **beforeMount** & **mounted**
 
-Pada lifecycle ini, bisa / memiliki akses penuh terhadap komponen reaktif, templates, dan DOM   
-yang sudah dirender.
+Pada lifecycle ini, bisa / memiliki akses penuh terhadap komponen reaktif, templates, dan DOM yang sudah dirender.
 
-Gunakan ini apabila kita membutuhkan akses atau memodifikasi DOM pada komponen secepatnya, sebelum 
-atau sesudah render awal (initial render).
+Gunakan ini apabila kita membutuhkan akses atau memodifikasi DOM pada komponen secepatnya, sebelum atau sesudah render awal (initial render).
 
 #### updated
-Nama lifecycle hook: **beforeUpdate** & **updated**
-(Tidak dicontohkan)
+Nama lifecycle hook: **beforeUpdate** & **updated** (Tidak dicontohkan)
 
-Lifecycle ini dipanggil ketika ada data yang berubah dan menyebabkan virtual DOM nya di render  
-ulang dan ditambalsulam.
+Lifecycle ini dipanggil ketika ada data yang berubah dan menyebabkan virtual DOM nya di render ulang dan ditambalsulam.
 
 Cocok digunakan untuk menghapus event listener secara manual (untuk optimasi)
 
